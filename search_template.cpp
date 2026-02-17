@@ -2,9 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <ctime>
-using namespace std;
-
-/**
+using namespace std;/**
  * @brief returns the first index of elem if it exists, otherwise returns -1
  * iterativeSearch starts at the first index and iterates sequentially to the next until it either
  * finds the element or until it reaches the the end (i.e. element does not exist)
@@ -15,15 +13,17 @@ using namespace std;
  */
 int iterativeSearch(vector<int>v, int elem){
     // use a for loop where the index, i goes from 0 to the size of v
-    
+    for (int i = 0; i < v.size(); i++)
+    {
+            if (v[i] == elem){
+                return i;
+            }
+    }
     // inside the for loop, use an if statement to check whether the element at i (e.g. v[i]) equals elem
-    // inside the if statement return i   
-
-
+    // inside the if statement return i  
     // outside of the for loop return -1
-
+    return -1;
 }
-
 /**
  * @brief returns the index of elem, if it exists in v. Otherwise it returns -1.
  * binarySearch is recursive (i.e. function calls itself).
