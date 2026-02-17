@@ -3,6 +3,7 @@
 #include <random>
 #include <fstream>
 #include <cmath>
+#include <string>
 
 int main() {
     int N = 100000; //ten million Total number of unique numbers to generate
