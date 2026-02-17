@@ -64,7 +64,7 @@ if (v[midpoint] < elem)
     }
     else
     {
-        return m
+        return midpoint;
     // return a recursive call to binarySearch(...)
 
 
