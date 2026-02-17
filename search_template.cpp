@@ -54,7 +54,17 @@ int binarySearch(vector<int> & v, int start, int end, int elem){
     // 1) update end (search left half)
     // 2) update start (search right half)
     // 3) return mid (found the elem)
-
+if (v[midpoint] < elem)
+    {
+        return binarySearch(v, midpoint + 1, end, elem);
+    }
+    else if (v[midpoint] > elem)
+    {
+        return binarySearch(v, start, midpoint - 1, elem);
+    }
+    else
+    {
+        return m
     // return a recursive call to binarySearch(...)
 
 
