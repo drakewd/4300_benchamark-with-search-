@@ -155,7 +155,7 @@ int main(){
             { // append the elapsed_time_in_sec to the vector,times (hint: push_back())
               // This code shuold be within the for loop that iterates 
               // through all the elements from elem_to_find
-               
+               times.push_back(elapsed_time_in_sec);
             }
             
             
