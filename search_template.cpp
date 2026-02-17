@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <ctime>
+#include <string>
 using namespace std;/**
  * @brief returns the first index of elem if it exists, otherwise returns -1
  * iterativeSearch starts at the first index and iterates sequentially to the next until it either
