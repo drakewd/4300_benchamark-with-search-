@@ -151,21 +151,22 @@ int main(){
         times.clear();
         // create another for loop to iterate through all the elements from elem_to_find. 
         // the code here should be nearly identical to the code from the previous lab 
-        for (int i = 0; i < elem_to_find.size(); i++)
-            { // append the elapsed_time_in_sec to the vector,times (hint: push_back())
-              // This code shuold be within the for loop that iterates 
-              // through all the elements from elem_to_find
-               times.push_back(elapsed_time_in_sec);
-            }
+        for (int i = 0; i < elem_to_find.size(); i++) {
+            clock_t start = clock();
+            // Perform the search (iterativeSearch in this case)
+            int result = iterativeSearch(v, elem_to_find[i]);
+            clock_t end = clock();
+            double elapsed_time_in_sec = double(end - start) / CLOCKS_PER_SEC;
+            times.push_back(elapsed_time_in_sec);
+        }
             
-            
-      
         // call average on the vector, times, and save it as a double. This code should be 
         // outside the for loop that iterates through all the elements from elem_to_find
         // but within the for loop that iterates through the file sizes
-        
-
+       double times_avg = average(times);
+            
         // append the double to avg. (hint: push_back())
+        avg.push_back(times_avg);
         // This code should be outside the for loop that iterates through
         // all the elements from elem_to_find
         // but within the for loop that iterates through the file sizes
