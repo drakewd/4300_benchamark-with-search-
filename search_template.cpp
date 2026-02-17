@@ -140,38 +140,41 @@ int main(){
     vector<double> avg;
     
     // create a for loop to iterate through the file sizes
-        for(int i = 0; i < file_sizes.size(); i++) {
-        // get the name/size of the file and assign it to string called filename
+         for(int i = 0; i < file_sizes.size(); i++) {
+            // get the name/size of the file and assign it to string called filename
             string filename = to_string(file_sizes[i]) + "_numbers.csv";
-        //call vecGen on filename and v
-        vecGen(filename,v);
-        // print filename (this will be good for debugging)
-        cout << "filename: " << filename << "\n";
-        // call times.clear() // this ensures that we reset times everytime we read a new file 
-        times.clear();
-        // create another for loop to iterate through all the elements from elem_to_find. 
-        // the code here should be nearly identical to the code from the previous lab 
-        for (int i = 0; i < elem_to_find.size(); i++) {
-            clock_t start = clock();
-            // Perform the search (iterativeSearch in this case)
-            int result = iterativeSearch(v, elem_to_find[i]);
-            clock_t end = clock();
-            double elapsed_time_in_sec = double(end - start) / CLOCKS_PER_SEC;
-            times.push_back(elapsed_time_in_sec);
-        }
+            //call vecGen on filename and v
+            vecGen(filename,v);
+            // print filename (this will be good for debugging)
+            cout << "filename: " << filename << "\n";
+            // call times.clear() // this ensures that we reset times everytime we read a new file 
+            times.clear();
+            // create another for loop to iterate through all the elements from elem_to_find. 
+            // the code here should be nearly identical to the code from the previous lab 
+            for (int i = 0; i < elem_to_find.size(); i++) 
+            {
+                clock_t start = clock();
+                // Perform the search (iterativeSearch in this case)
+                int result = iterativeSearch(v, elem_to_find[i]);
+                clock_t end = clock();
+                double elapsed_time_in_sec = double(end - start) / CLOCKS_PER_SEC;
+                times.push_back(elapsed_time_in_sec);
+            }
             
-        // call average on the vector, times, and save it as a double. This code should be 
-        // outside the for loop that iterates through all the elements from elem_to_find
-        // but within the for loop that iterates through the file sizes
-       double times_avg = average(times);
             
-        // append the double to avg. (hint: push_back())
-        avg.push_back(times_avg);
-        // This code should be outside the for loop that iterates through
-        // all the elements from elem_to_find
-        // but within the for loop that iterates through the file sizes
+      
+            // call average on the vector, times, and save it as a double. This code should be 
+            // outside the for loop that iterates through all the elements from elem_to_find
+            // but within the for loop that iterates through the file sizes
+            double times_avg = average(times);
+            
+            // append the double to avg. (hint: push_back())
+            avg.push_back(times_avg);
+            // This code should be outside the for loop that iterates through
+            // all the elements from elem_to_find
+            // but within the for loop that iterates through the file sizes
         
-    }
+        }
 
     //outside both for loops call writeTimes with the appropriate parameters
     // the first parameter should be "iterativeSearch_times.csv"
