@@ -140,24 +140,23 @@ int main(){
     vector<double> avg;
     
     // create a for loop to iterate through the file sizes
-        for(int i = 0; i < file_size.size(); i++) {
+        for(int i = 0; i < file_sizes.size(); i++) {
         // get the name/size of the file and assign it to string called filename
-            string filename = to_string(file_size[i]) + "_numbers.csv";
+            string filename = to_string(file_sizes[i]) + "_numbers.csv";
         //call vecGen on filename and v
-        
+        vecGen(filename,v);
         // print filename (this will be good for debugging)
-       
+        cout << "filename: " << filename << "\n";
         // call times.clear() // this ensures that we reset times everytime we read a new file 
-        
+        times.clear();
         // create another for loop to iterate through all the elements from elem_to_find. 
         // the code here should be nearly identical to the code from the previous lab 
-    
-            
-            
-      
-            // append the elapsed_time_in_sec to the vector,times (hint: push_back())
-            // This code shuold be within the for loop that iterates 
-            // through all the elements from elem_to_find
+        for (int i = 0; i < elem_to_find.size(); i++)
+            { // append the elapsed_time_in_sec to the vector,times (hint: push_back())
+              // This code shuold be within the for loop that iterates 
+              // through all the elements from elem_to_find
+               
+            }
             
             
       
