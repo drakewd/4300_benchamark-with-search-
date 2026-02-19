@@ -12,7 +12,7 @@ int main() {
     // Initialize a random number generator
     std::random_device rd;
     std::mt19937 gen(rd());
-    int range = 100000000;//hundred million
+    int range = 100000000;// 100 million
     std::uniform_int_distribution<> dis(1, range); // Adjust the range as needed
 
     // Generate unique random numbers

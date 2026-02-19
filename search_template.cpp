@@ -145,7 +145,7 @@ int binarySearch(vector<int>& v, int start, int end, int elem) {
         // create a for loop to iterate through the file sizes
         for (int i = 0; i < file_sizes.size(); i++) {
             // get the name/size of the file and assign it to string called filename
-            string filename = to_string(file_sizes[i]) + "_numbers.csv";
+            string filename = to_string(file_sizes[i]) + ".csv";
             //call vecGen on filename and v
             vecGen(filename, v);
             // print filename (this will be good for debugging)
@@ -181,7 +181,7 @@ int binarySearch(vector<int>& v, int start, int end, int elem) {
         // create a for loop to iterate through the file sizes
         for (int i = 0; i < file_sizes.size(); i++) {
             // get the name/size of the file and assign it to string called filename
-            string filename = to_string(file_sizes[i]) + "_numbers.csv";
+            string filename = to_string(file_sizes[i]) + ".csv";
             //call vecGen on filename and v
             vecGen(filename, v);
             // print filename (this will be good for debugging)
